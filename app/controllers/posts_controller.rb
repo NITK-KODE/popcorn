@@ -3,6 +3,10 @@ class PostsController < ActionController::Base
         
     end
     
+    def show
+        @post = Post.find(params[:id])
+    end
+    
     def create
         @p = Post.new(title:params[:title] , post:params[:post] , user_id:current_user.id)
         if @p.save 

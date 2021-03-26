@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   put '/post/:id/like' => 'posts#like'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root 'users#index'
+  resources :posts , only:[:show]
+
 end
