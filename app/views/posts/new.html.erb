@@ -1,0 +1,14 @@
+<%= form_with(model:@posts) do |f| %>
+  
+
+    <h1 class="display-1>Pop</h1>
+    
+    <div class="field">
+    <%= f.label :post %><br />
+    <%= f.text_field :post%>
+  </div>
+  
+    <div class="actions">
+      <%= f.submit "pop" %>
+    </div>
+  <% end %>

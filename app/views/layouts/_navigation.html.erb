@@ -24,7 +24,7 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        <%= link_to 'Sign out', destroy_user_session_path , method: :delete  , class:"nav-link"%>
         </li>
       </ul>
       
