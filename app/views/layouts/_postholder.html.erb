@@ -9,6 +9,8 @@
       <p><%=o.post%></p>
       <hr>
       <%= link_to "Show" , post_path(o) , class:"badge badge-primary" %>
+      <%= link_to "Like" , like_path(o) , method: :put , class:"badge badge-danger" %>
+      <%= link_to "Comment" , post_path(o) , class:"badge badge-light" %>
     </blockquote>
   </div>
 </div>
