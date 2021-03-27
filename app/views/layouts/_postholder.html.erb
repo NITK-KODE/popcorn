@@ -8,10 +8,17 @@
     <blockquote class="blockquote mb-0">
       <p><%=o.post%></p>
       <hr>
+      <div class="row">
+      <div class="col-8">
       <%= link_to "Show" , post_path(o) , class:"badge badge-primary" %>
       <%= link_to "Like" , like_path(o) , method: :put , class:"badge badge-danger" %>
       <%= link_to "Comment" , post_path(o) , class:"badge badge-light" %>
-    </blockquote>
+      </div>
+      <div class="col-4">
+       <%=o.likes.count%>
+      </div>
+      </div>
+      </blockquote>
   </div>
 </div>
 </div>
