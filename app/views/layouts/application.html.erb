@@ -12,8 +12,7 @@
 <header>
 </header>  
 <body>
-<%=render "layouts/navigation" %>
+<%=render("layouts/navigation") if user_signed_in? %>
     <%= yield %>
-    
   </body>
 </html>

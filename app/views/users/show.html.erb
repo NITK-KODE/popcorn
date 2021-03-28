@@ -7,3 +7,4 @@
 
 
 <%= render "layouts/postholder" , obj:@user.posts%>
+<%= render "layouts/pop" if @user.id == current_user.id%>
