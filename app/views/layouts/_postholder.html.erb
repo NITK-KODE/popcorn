@@ -1,31 +1,5 @@
 <% obj.reverse.each do |o|%>
 <div class="row justify-content-center">
-<div class="card col-8">
-  <div class="card-header">
-    <%=o.title%>
-  </div>
-  <div class="card-body">
-    <blockquote class="blockquote mb-0">
-      <p><%=o.post%></p>
-      <hr>
-      <div class="row">
-      <div class="col-4">
-      <%= link_to "Show" , post_path(o) , class:"badge badge-primary" %>
-      <%= link_to "Like" , like_path(o) , method: :put , class:"badge badge-danger" %>
-      <%=o.likes.count%>
-      </div>
-      <div class="col-4">
-      </div>
-
-      <div class="col-4">
-       <%=o.created_at.strftime("%d %b %y")%>
-      </div>
-      </div>
-
-      </blockquote>
-      <footer><%=render "layouts/comment" , obj:o%></footer>
-      <%=render "layouts/commentSection" , obj:o%>
-  </div>
-</div>
+<%=render "layouts/post" , obj:o%>
 </div>
 <%end%>

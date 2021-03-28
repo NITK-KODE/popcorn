@@ -1,14 +1,5 @@
 <div class="row justify-content-center">
-<div class="card col-8">
-  <div class="card-header">
-    <%=@post.title%>
-  </div>
-  <div class="card-body">
-    <blockquote class="blockquote mb-0">
-      <p><%=@post.post%></p>
-      <hr>
-    </blockquote>
-  </div>
-</div>
-</div>
 
+<%=render "layouts/post" , obj:@post%>
+
+</div>

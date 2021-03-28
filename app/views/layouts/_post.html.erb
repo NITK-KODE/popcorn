@@ -1,0 +1,27 @@
+<div class="card col-8">
+  <div class="card-header">
+    <%=obj.title%>
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p><%=obj.post%></p>
+      <hr>
+      <div class="row">
+      <div class="col-4">
+      <%= link_to "Show" , post_path(obj) , class:"badge badge-primary" %>
+      <%= link_to "Like" , like_path(obj) , method: :put , class:"badge badge-danger" %>
+      <%=obj.likes.count%>
+      </div>
+      <div class="col-4">
+      </div>
+
+      <div class="col-4">
+       <%=obj.created_at.strftime("%d %b %y")%>
+      </div>
+      </div>
+
+      </blockquote>
+      <footer><%=render "layouts/comment" , obj:obj%></footer>
+      <%=render "layouts/commentSection" , obj:obj%>
+  </div>
+</div>
