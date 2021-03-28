@@ -1,0 +1,5 @@
+<ul class="list-group list-group-flush">
+<% obj.comments.reverse.each do |c| %>
+  <li class="list-group-item"><%=c.user.email%> | <%=c.comment%></li>
+  <%end%>
+</ul>

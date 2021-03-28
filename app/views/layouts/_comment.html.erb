@@ -1,7 +1,10 @@
-<form class="form-inline">
-  <div class="form-group mx-sm-3 mb-2">
-    <label for="inputPassword2" class="sr-only">Password</label>
-    <input type="text" class="form-control" id="inputPassword2" placeholder="Password">
-  </div>
-  <button type="submit" class="btn btn-primary mb-2">comment</button>
-</form>
+<%= form_with(model:@comment , url: comment_path(obj), method: "create" ,  html:{class:"form-inline"}) do |f| %>
+
+ 
+    <div class="field">
+    <%= f.text_field :comment , class:"form-control mb-2 mr-sm-2"%>
+    </div>  
+    <div class="actions">
+      <%= f.submit "comment" , class:"btn btn-primary mb-2"%>
+    </div>
+<% end %>

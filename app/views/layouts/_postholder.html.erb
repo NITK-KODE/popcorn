@@ -1,4 +1,4 @@
-<% obj.each do |o|%>
+<% obj.reverse.each do |o|%>
 <div class="row justify-content-center">
 <div class="card col-8">
   <div class="card-header">
@@ -9,17 +9,22 @@
       <p><%=o.post%></p>
       <hr>
       <div class="row">
-      <div class="col-8">
+      <div class="col-4">
       <%= link_to "Show" , post_path(o) , class:"badge badge-primary" %>
       <%= link_to "Like" , like_path(o) , method: :put , class:"badge badge-danger" %>
-      <%= link_to "Comment" , post_path(o) , class:"badge badge-light" %>
+      <%=o.likes.count%>
       </div>
       <div class="col-4">
-       <%=o.likes.count%>
+      </div>
+
+      <div class="col-4">
+       <%=o.created_at.strftime("%d %b %y")%>
       </div>
       </div>
+
       </blockquote>
-      <footer><%=render "layouts/comment"%></footer>
+      <footer><%=render "layouts/comment" , obj:o%></footer>
+      <%=render "layouts/commentSection" , obj:o%>
   </div>
 </div>
 </div>
