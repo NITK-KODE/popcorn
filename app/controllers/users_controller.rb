@@ -7,4 +7,9 @@ class UsersController < ApplicationController
     def feed
         @post = Post.all
     end
+
+    def show
+        
+        @user = User.find(params[:id])
+    end
 end
