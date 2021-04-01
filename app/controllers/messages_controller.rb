@@ -4,13 +4,14 @@ class MessagesController < ApplicationController
     end
 
     def create
-        respond_to do |format|
+     
             @message = Message.create(user_id:current_user.id , message:params[:content])
             if @message.save 
                 ActionCable.server.broadcast 'room_channel' , {content:"test content" , user_id: 54}
-                format.html
-                format.js
+            else
+                redirect_to root_path
+
             end
-        end
+       
     end
 end

@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root 'users#feed'
   resources :posts , only:[:show]
-  resources :messages , only:[:create , :new]
+  resources :messages , only:[:create]
+  get '/messages' => 'messages#new'
 
 end
