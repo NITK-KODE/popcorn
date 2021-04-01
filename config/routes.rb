@@ -6,9 +6,8 @@ Rails.application.routes.draw do
   post '/posts/:id/comment' => 'posts#comment' , as:'comment'
   get '/users/:id' => 'users#show' , as:"profile"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  root 'users#feed'
+  root 'messages#index'
   resources :posts , only:[:show]
-  resources :messages , only:[:create]
-  get '/messages' => 'messages#new'
+  resources :messages , only:[:create , :new]
 
 end

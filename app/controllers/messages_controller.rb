@@ -3,15 +3,18 @@ class MessagesController < ApplicationController
         @message = Message.new
     end
 
+    def index
+        @message = Message.new
+    end
     def create
      
-            @message = Message.create(user_id:current_user.id , message:params[:content])
+            @message = Message.create(user_id:current_user.id , message:params[:message])
             if @message.save 
-                ActionCable.server.broadcast 'room_channel' , {content:"test content" , user_id: 54}
+                ActionCable.server.broadcast 'room_channel' , {content:params[:message] , user_id: current_user.id}
             else
                 redirect_to root_path
 
             end
-       
+            
     end
 end
