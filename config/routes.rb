@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get '/users/:id' => 'users#show' , as:"profile"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root 'users#feed'
+  get '/m' => 'messages#index'
   resources :posts , only:[:show]
+  resources :messages , only:[:create , :new]
 
 end
