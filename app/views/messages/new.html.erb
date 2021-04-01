@@ -1,0 +1,7 @@
+<div class="inner">Hello</div>
+
+<%= form_with model:@message  , remote: true do |f|%>
+<%=f.text_field :message %>
+<%= f.submit %>
+
+<%end%>
