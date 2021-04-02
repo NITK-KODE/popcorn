@@ -1,5 +1,62 @@
 @import 'bootstrap/dist/css/bootstrap';
+@font-face {
+    font-family: 'BalsamiqSans';
+    src: url('BalsamiqSans-Regular.ttf');
+ }
+ @font-face {
+     font-family: 'Nunito';
+     src:url('Nunito-Regular.ttf')
+ }
+ @font-face {
+    font-family: 'NunitoBlack';
+    src:url('Nunito-Black.ttf')
+}
+
 
 *{
     overflow-x: hidden;
+    font-family: "Nunito";
+    font-weight: 600;
+     
 }
+
+.nav{
+    background-color: black;
+}
+.navbar-brand img{
+    width:30px;
+}
+
+.nav-title{
+    color:wheat;
+    padding-left: 10px;
+    font-family: "NunitoBlack";
+  
+    font-size: 20px;
+}
+.nav-item {
+    margin:0 20px 0 20px;
+
+}
+
+.navigation{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 60px;
+    background-color: black;
+}
+.navigation i{
+    color:white;
+    font-size: 25px;
+}
+.navigation img{
+    width:30px;
+
+}
+
+ @media (max-width: 767px) {
+        .nav-title {
+          display: none;
+        }
+      }
