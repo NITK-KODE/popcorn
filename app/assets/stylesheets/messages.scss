@@ -1,10 +1,56 @@
 // Place all the styles related to the messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-     @media (min-width: 800px) and (max-width: 850px) {
-              .navbar:not(.top-nav-collapse) {
-                  background: #1C2331!important;
-              }
-          }
 
-.carousel,.carousel .carousel-inner,.carousel .carousel-inner .active,.carousel .carousel-inner .carousel-item,.view,body,html{height:100%}.navbar{background-color:rgba(0,0,0,.2)}.page-footer,.top-nav-collapse{background-color:#1C2331}@media only screen and (max-width:768px){.navbar{background-color:#1C2331}}
+
+.chat-box::-webkit-scrollbar {
+    display: none;
+  }
+
+.chat-box{
+    height: 80vh;
+    padding: 20px;
+    width: 90vw;
+}
+.send{
+
+    background-color: lawngreen;
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+}    
+.user-message{
+    background-color:royalblue;
+    color: white;
+    width: 50vw;
+    padding: 20px 30px 20px 30px;
+    border-radius: 50px;
+}
+
+.sent{
+    margin-left: auto;
+    background-color:orange;
+    color: black;
+}
+
+.send-controls{
+    padding: 20px;
+    overflow:hidden;
+}
+
+.sender{
+    color: white;
+    padding: 5px 10px 5px 10px;
+    border-radius: 100px;
+    background-color: black;
+    
+}
+
+@media (max-width:768px){
+    .chat-box{
+        width: 100vw;
+    }
+    .send{
+        width: 100vw;
+    }
+}
