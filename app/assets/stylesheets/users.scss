@@ -42,16 +42,11 @@ height: 200px;
 }
 
 .mycontainer{
-
-	border: 2px solid #0C9;
+	margin-top: 50px;
 	width:75vw;
 
 }
 
-
-.user{
-	border: 2px solid black ;
-}
 
 .user .wrap{
 	background-color: royalblue;
@@ -59,9 +54,6 @@ height: 200px;
 
 .p-wrap{
 	height: 50px;
-}
-.myrow{
-	border:2px teal;
 }
 
 
@@ -88,7 +80,43 @@ height: 200px;
 	right:10px ;
 }
 
+// post holder CSS start now
+
+.postholder{
+	height: 400px;
+	width: 75vw;
+	padding:20px 50px 20px 50px;
+	margin:10px 0px 100px 0px;
+	background-color: springgreen;
+	border-radius: 10px;
+}
+
+.username i{
+	padding-right: 10px;
+}
+
+.username{
+	font-size: 20px;
+}
+
+
+.pop{
+	font-size: 40px;
+}
+
+.response i{
+	font-size: 25px;
+	padding-right: 20px;
+}
+
 @media (max-width: 767px) {
+	
+	.pop{
+		font-size: 30px;
+	}
+.date{
+	font-size: 12px;
+}
 	.container{
 		width: 100vw;
 	}
