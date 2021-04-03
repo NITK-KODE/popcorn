@@ -1,7 +1,30 @@
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">Fluid jumbotron</h1>
-    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+<div class="container mycontainer">
+ <div class="row myrow">
+   <div class="col-4 user">
+    <img src="<%=asset_path('logo.png')%>">
+   </div>
+   <div class="col-8 user"> 
+          <h2>Anas Aijaz <span class="zodiac">Scorpio</span></h2>
+          <p>Player</p>
+          <p>This is my description and I hate it completely</p>
+   </div>
+ </div>
+ <div class="row">
+   <div class="col-4 d-flex justify-content-center">
+     <button type="button" class="btn btn-primary btn-sm">Small button</button>
+   </div>
+ </div>
+
+  <div class="row justify-content-around badges ">
+    <div class="col-3 badge">
+     360 followers
+    </div>
+    <div class="col-3 badge">
+      345 following
+     </div>
+     <div class="col-3 badge">
+      16 posts
+     </div>
   </div>
 </div>
 

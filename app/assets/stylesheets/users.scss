@@ -1,11 +1,35 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-.jumbotron{
-    height: 300px;
-    border-bottom: 1px solid black;
+
+
+.mycontainer{
+
+	border: 2px solid #0C9;
+	width:75vw;
 
 }
+
+.user:first-child{
+	background-color: rebeccapurple;
+	height: 150px;
+}
+
+.user{
+	border: 2px solid black ;
+}
+
+.user .wrap{
+	background-color: royalblue;
+}
+
+.p-wrap{
+	height: 50px;
+}
+.myrow{
+	border:2px teal;
+}
+
 
 .float{
 	position:fixed;
@@ -29,3 +53,9 @@
 	bottom: 10px ;
 	right:10px ;
 }
+
+@media (max-width: 767px) {
+	.wrap h2{
+		z
+	}
+  }

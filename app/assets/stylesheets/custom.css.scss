@@ -16,12 +16,12 @@
 *{
     overflow-x: hidden;
     font-family: "Nunito";
-    font-weight: 600;
      
 }
 
 .nav{
     background-color: black;
+    
 }
 .navbar-brand img{
     width:30px;
@@ -45,6 +45,7 @@
     flex-wrap: wrap;
     height: 60px;
     background-color: black;
+    margin-bottom: 10px;
 }
 .navigation i{
     color:white;
