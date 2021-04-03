@@ -2,6 +2,44 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+.badge i{
+	font-size: 20px;
+}
+
+.options{
+	background-color:skyblue;
+}
+
+.user{
+height: 200px;
+}
+
+.user img{
+	width: 150px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.user p{
+	font-size: 18px;
+	margin-bottom: 0;
+}
+
+.zodiac{
+	font-size: 20px;
+	font-family: monospace;
+}
+
+
+.row:nth-child(2) button{
+	margin-top: 10px;
+}
+
+.badges{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
 
 .mycontainer{
 
@@ -10,10 +48,6 @@
 
 }
 
-.user:first-child{
-	background-color: rebeccapurple;
-	height: 150px;
-}
 
 .user{
 	border: 2px solid black ;
@@ -55,7 +89,39 @@
 }
 
 @media (max-width: 767px) {
-	.wrap h2{
-		z
+	.container{
+		width: 100vw;
 	}
+	.user img{
+		width: 100px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.user p{
+		font-size: 12px;
+		margin-bottom: 0;
+	}
+
+	.zodiac{
+		font-size: 20px;
+		font-family: monospace;
+	}
+
+	.row:nth-child(2) button{
+		margin-top: 10px;
+	}
+
+	.badges{
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	.option button{
+		display: block;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	
+
   }
