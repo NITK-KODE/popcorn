@@ -3,11 +3,23 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 .badge i{
-	font-size: 20px;
+	font-size: 30px;
+	
 }
 
+.badge{
+	font-size: 15px;
+}
+.badges{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+
 .options{
+	height: 50px;
 	background-color:skyblue;
+	padding-top: 8px;
 }
 
 .user{
@@ -36,10 +48,7 @@ height: 200px;
 	margin-top: 10px;
 }
 
-.badges{
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
+
 
 .mycontainer{
 	margin-top: 50px;
@@ -109,14 +118,30 @@ height: 200px;
 	padding-right: 20px;
 }
 
+.postholder img{
+	width: 35px;
+	margin-right: 5px;
+	background-color: hotpink;
+}
+
+.date{
+ text-align: right;
+}
 @media (max-width: 767px) {
 	
 	.pop{
-		font-size: 30px;
+		font-size: 25px;
 	}
-.date{
-	font-size: 12px;
-}
+    .date{
+	font-size: 10px;
+    }  
+
+	.postholder{
+		
+		padding:20px 30px 20px 30px;
+		
+	}
+
 	.container{
 		width: 100vw;
 	}
@@ -138,11 +163,6 @@ height: 200px;
 
 	.row:nth-child(2) button{
 		margin-top: 10px;
-	}
-
-	.badges{
-		margin-top: 10px;
-		margin-bottom: 10px;
 	}
 
 	.option button{
