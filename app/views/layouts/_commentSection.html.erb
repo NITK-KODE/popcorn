@@ -1,5 +1,22 @@
+
+
+
 <ul class="list-group list-group-flush">
 <% obj.comments.reverse.each do |c| %>
+  <div class="container commentholder">
+  
+<div class="row">
+<div class="col-1">
+ Pic
+</div>
+
+  <div class="col-11 reply">
+    Damn is this really true?
+  </div>
+</div> 
+</div>
+
   <li class="list-group-item"><%=c.user.email%> | <%=c.comment%></li>
   <%end%>
 </ul>
+

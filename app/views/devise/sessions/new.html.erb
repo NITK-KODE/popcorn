@@ -1,26 +1,68 @@
-<h2 >Log in</h2>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+<div class="container-fluid">
+<div class="row no-gutter">
+    <!-- The image half -->
+    <div class="col-md-6 d-none d-md-flex bg-image"></div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
 
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end %>
+    <!-- The content half -->
+    <div class="col-md-6 bg-light">
+        <div class="login d-flex align-items-center py-5">
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
+            <!-- Demo content-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 col-xl-7 mx-auto">
+                        <h3 class="display-4">Welcome to P<span><img class="rounded-circle popcorn" src="<%=asset_path('logo.png')%>"></span>pcorn</h3>
+                        <p class="text-muted mb-4">Connecting NIT K like never before!</p>
+                        
+                        
+                        
 
-<%= render "devise/shared/links" %>
+                        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                          <%= render "devise/shared/error_messages", resource: resource %>
+                        
+                          <div class="form-group mb-3">
+                            <%= f.email_field :email, placeholder:"Email",autofocus: true, autocomplete: "email" , class:"form-control rounded-pill border-0 shadow-sm px-4"%>
+                          </div>
+                        
+                          <div class="form-group mb-3">
+                            
+                          
+                            <%= f.password_field :password,type:"password" , placeholder:"Password",autocomplete: "new-password" , class:"form-control rounded-pill border-0 shadow-sm px-4"%>
+                          </div>
+
+                        
+                      
+                          <div class="actions">
+                            <%= f.submit "Sign in" , class:"btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm" %>
+                          </div>
+                        <% end %>
+                        
+                        <%= render "devise/shared/links" %>
+                        
+
+                    </div>
+                </div>
+            </div><!-- End -->
+
+        </div>
+    </div><!-- End -->
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Sign in page-->
+
+

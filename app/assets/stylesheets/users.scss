@@ -138,6 +138,32 @@ height: 200px;
 .date{
  text-align: right;
 }
+
+
+
+// Sign Up page
+
+.display-4{
+	font-size: 35px;
+	overflow: hidden;
+}
+.login,
+.image {
+  min-height: 100vh;
+}
+
+.bg-image {
+  background-image: image-url("castle.png");
+  background-size: cover;
+  background-position: center center;
+}
+.terms-label{
+	font-size: 12px;
+}
+// end Sign up page
+
+
+
 @media (max-width: 767px) {
 	
 	.pop{
@@ -182,5 +208,11 @@ height: 200px;
 		margin-left: auto;
 	}
 	
+
+	.display-4{
+		font-size: 30px;
+		overflow: hidden;
+		text-align: center;
+	}
 
   }
