@@ -22,7 +22,11 @@
                               <%= render "devise/shared/error_messages", resource: resource %>
                             
                               <div class="form-group mb-3">
-                                <%= f.email_field :email, placeholder:"Email",autofocus: true, autocomplete: "email" , class:"form-control rounded-pill border-0 shadow-sm px-4"%>
+                                <%= f.email_field :email, placeholder:"NITK Email",autofocus: true, autocomplete: "email" , class:"form-control rounded-pill border-0 shadow-sm px-4"%>
+                              </div>
+
+                              <div class="form-group mb-3">
+                                <%= f.text_field :username, placeholder:"Name",autofocus: true, class:"form-control rounded-pill border-0 shadow-sm px-4"%>
                               </div>
                             
                               <div class="form-group mb-3">

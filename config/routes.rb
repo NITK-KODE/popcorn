@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users , controllers:{
+    confirmations:'confirmations',
+    registrations:'registrations'
+  }
   post '/pop' => 'posts#create'
   get '/feed' => 'users#feed'
   put '/posts/:id/like' => 'posts#like' , as: 'like'

@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
-    def verify_authenticity_token
-        request.headers['X-CSRF-Token'] ||= request.headers['X-XSRF-TOKEN']
-        super
-      end
+    protect_from_forgery with: :exception
+
+    
+
+    
 end
