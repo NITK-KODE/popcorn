@@ -106,8 +106,8 @@ height: 200px;
 	height: 400px;
 	width: 75vw;
 	padding:20px 50px 20px 50px;
-	margin:10px 0px 100px 0px;
-	background-color: springgreen;
+	margin:20px 0px 20px 0px;
+	background: linear-gradient(to right , springgreen , yellow);
 	border-radius: 10px;
 }
 
@@ -122,6 +122,7 @@ height: 200px;
 
 .pop{
 	font-size: 40px;
+	height: 180px;
 }
 
 .response i{
@@ -176,6 +177,8 @@ height: 200px;
 	.postholder{
 		
 		padding:20px 30px 20px 30px;
+     	margin:10px 0px;
+
 		
 	}
 

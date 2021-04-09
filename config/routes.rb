@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     confirmations:'confirmations',
     registrations:'registrations'
   }
+  get '/pop' => 'posts#new'
   post '/pop' => 'posts#create'
   get '/feed' => 'users#feed'
   put '/posts/:id/like' => 'posts#like' , as: 'like'

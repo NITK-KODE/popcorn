@@ -32,7 +32,8 @@
 
   <div class="row justify-content-around badges options">
     <div class="col-2 badge">
-    <i class="bi bi-plus-circle-fill"></i>
+    <%=link_to '<i class="bi bi-plus-circle-fill"></i>'.html_safe, pop_path %>
+   
    
     </div>
     <div class="col-2 badge">
@@ -51,4 +52,3 @@
 </div>
 
 <%= render "layouts/postholder" , obj:@user.posts%>
-<%= render "layouts/pop" if @user.id == current_user.id%>

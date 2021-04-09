@@ -1,14 +1,26 @@
-<%= form_with(model:@posts) do |f| %>
-  
+<div class="containerwrapper">
 
-    <h1 class="display-1>Pop</h1>
-    
-    <div class="field">
-    <%= f.label :post %><br />
-    <%= f.text_field :post%>
-  </div>
+  <div class="container-fluid newpostholder">
   
-    <div class="actions">
-      <%= f.submit "pop" %>
-    </div>
-<% end %>
+    <%= form_with(model:@posts) do |f| %>
+  <div class="row">
+  
+    
+  
+  
+        <%= f.text_area :post , id:"post" , placeholder:"Temme what do you think?"%>
+  
+  
+        
+        
+      </div>
+      <div class="row d-flex justify-content-center">
+        <%= f.submit "Post" ,id:"pstbtn",class:"btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm"%>
+        
+  </div>
+  <% end %>
+  
+  
+  </div>
+
+</div>
