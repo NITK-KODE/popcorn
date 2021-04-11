@@ -2,11 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .commentholder{
-    background-color: chocolate;
+    margin-bottom: 5px;
     padding: 10px 20px;
     width: 75vw;
+    background:rgb(223, 223, 223);
+    border-radius: 5px;
 }
 
+.comment-comment{
+
+}
+.comment-username{
+    font-weight: bold;
+}
 .containerwrapper{
     height: 100vh;
     background-image: url("https://i.ytimg.com/vi/p7TDpx0hsn4/maxresdefault.jpg");
@@ -59,7 +67,52 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   #post:focus {
     outline: none;
   }
+  
+  .bi-heart:active{
+      font-size: 30px;
+  }
+  .bi-heart:hover{
+      color: red;
+      
+  }
+
+  .bi-heart-fill{
+      color: red;
+  }
+
+  .rounded-circle{
+      border: 3px dashed black;
+  }
+
+  // Comment box Styling
+  .comment-box{
+      background:none;
+      border: none;
+      outline: none;
+      width: 100%;
+      padding: 10px;
+  }
+
+  .comment-button{
+      border: none;
+      background: none;
+      outline: none;
+      color: blue;
+      font-weight: bold;
+  }
+
 @media (max-width:768px){
+
+
+    .comment-button{
+        font-size: 12px;
+    }
+
+    .like-count{
+        font-size: 12px;
+    }
+
+
     .newpostholder{
         width: 100vw;
     }

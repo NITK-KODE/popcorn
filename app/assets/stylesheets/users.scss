@@ -61,11 +61,6 @@ height: 200px;
 
 
 
-.mycontainer{
-	margin-top: 50px;
-	width:75vw;
-
-}
 
 
 .user .wrap{
@@ -103,14 +98,18 @@ height: 200px;
 // post holder CSS start now
 
 .postholder{
-	height: 400px;
 	width: 75vw;
 	padding:20px 50px 20px 50px;
 	margin:20px 0px 20px 0px;
-	background: linear-gradient(to right , springgreen , yellow);
+	background: springgreen;
+	transition: background-color 300ms linear;
 	border-radius: 10px;
 }
 
+.postholder:hover{
+	background: yellow;
+	transition: background-color 300ms linear;
+}
 .username i{
 	padding-right: 10px;
 }
