@@ -1,6 +1,6 @@
 <div class="container postholder">
   <div class="row">
-     <div class="col-9"><p class="username" ><img class="rounded-circle" src="<%=asset_path('logo.png')%>"> <%=obj.user.username.capitalize if obj.user.username%></p></div>
+     <div class="col-9"><p class="username" ><img class="rounded-circle" src="<%=asset_path('logo.png')%>"> <a href="<%=profile_path(obj.user)%>"><%=obj.user.username.capitalize if obj.user.username%></a></p></div>
      <div class="col-3"><p class="date"><%=obj.created_at.strftime("%d %b")%></p></div>
   </div>
   <div class="row">
@@ -21,7 +21,7 @@
     <%= link_to '<i class="bi bi-chat-square-dots"></i>'.html_safe , post_path(obj) %>
     <i class="bi bi-arrow-90deg-right"></i>
   </div>
-  <div class="col-4 d-flex justify-content-end like-count"><p>4900 Heart</p></div> 
+  <div class="col-4 d-flex justify-content-end like-count"><p><%=pluralize(obj.likes.count , "Heart")%> </p></div> 
 </div>
 
 

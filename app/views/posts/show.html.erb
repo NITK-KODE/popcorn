@@ -5,6 +5,13 @@
 <%=render "layouts/comment" , obj:@post%>
 </div>
 
+<div class="container commentholder" >
+
+    <%if @post.comments.count != 0 %>
+
 <%= render "layouts/commentSection" , obj:@post%>
+<%else%>
+<%= render "layouts/nocomments" , obj:@post%>
+<%end%>
 
-
+</div>

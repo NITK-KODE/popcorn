@@ -2,7 +2,7 @@
 
 
 <% obj.comments.reverse.each do |c| %>
-  <div class="container commentholder">
+
   
 <div class="row">
 <div class="col-md-1 col-sm-2 comment-username">
@@ -17,7 +17,6 @@
     <%=c.created_at.strftime("%d %b")%>
   </div>
 </div> 
-</div>
 
 
   <%end%>

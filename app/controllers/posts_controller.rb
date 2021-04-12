@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+    skip_before_action :verify_authenticity_token
+
     def new 
         @post = Post.new
     end
@@ -24,16 +26,14 @@ class PostsController < ApplicationController
     end
 
     def comment
-        @comment = Comment.new(comment:lund_params[:comment] , post_id:lund_params[:id] , user_id:current_user.id)
+        
+        @comment = Comment.new(comment:params[:comment] , post_id:params[:id] , user_id:current_user.id)
         if @comment.save 
-            redirect_to root_path
+            redirect_to "/posts/#{params[:id]}"
         else
             render root_path
         end
     end
 
-    private 
-    def lund_params
-        params.permit(:comment , :id)
-    end
+   
 end
