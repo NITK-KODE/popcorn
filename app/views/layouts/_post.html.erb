@@ -1,6 +1,6 @@
 <div class="container postholder">
   <div class="row">
-     <div class="col-9"><p class="username" ><img class="rounded-circle" src="<%=asset_path('logo.png')%>"> <a href="<%=profile_path(obj.user)%>"><%=obj.user.username.capitalize if obj.user.username%></a></p></div>
+     <div class="col-9"><p class="username" ><img class="rounded-circle" src="<%=asset_path('logo.png')%>"> <a href="<%=profile_path(obj.user)%>"><%=obj.user.username.capitalize%></a></p></div>
      <div class="col-3"><p class="date"><%=obj.created_at.strftime("%d %b")%></p></div>
   </div>
   <div class="row">

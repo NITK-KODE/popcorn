@@ -10,7 +10,7 @@ class PostsController < ApplicationController
     end
     
     def create
-        @p = Post.new(title:params[:title] , post:params[:post] , user_id:current_user.id)
+        @p = Post.new(post:params[:post] , user_id:current_user.id)
         if @p.save 
             redirect_to root_path
         else
@@ -31,7 +31,7 @@ class PostsController < ApplicationController
         if @comment.save 
             redirect_to "/posts/#{params[:id]}"
         else
-            render root_path
+            redirect_to
         end
     end
 
