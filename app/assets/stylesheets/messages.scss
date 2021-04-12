@@ -10,15 +10,30 @@
 .chat-box{
     height: 80vh;
     padding: 20px;
-    width: 90vw;
+    
+   
 }
 .send{
 
     background-color: lawngreen;
-    width: 90vw;
+    bottom: 0;
+    position: fixed;
+   
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
+    
 }    
+
+.sender{
+    background-color: black;
+    color: white;
+    text-align: right;
+    font-size: 12px;
+    border-radius: 50px;
+    font-weight: bold;
+}
+
 .user-message{
     background-color:royalblue;
     color: white;
@@ -34,7 +49,7 @@
 }
 
 .send-controls{
-    padding: 20px;
+    padding: 10px ;
     overflow:hidden;
 }
 

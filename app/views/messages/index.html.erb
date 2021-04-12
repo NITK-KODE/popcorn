@@ -1,17 +1,40 @@
+<!-- <div class="inner">Hello</div>
 
+<%= form_for @message  ,url:messages_path , method:"post" ,remote: true do |f|%>
+<%=f.text_field :message %>
+<%= f.submit %>
+
+<%end%> -->
 
 
 
 <div class="container-fluid chat-box">
    
     
-        <p class="user-message sent">
+
+
+        <%@messages.each do |message|%>
+        
+          <% if message.user_id == current_user.id%>
+              <p class="user-message sent">
+                <%= message.message%> 
+        
+              </p>
+          <%else%>
+              <p class="user-message">
+                <%= message.message%> 
+                <br><span class='sender'><%=User.find(message.user_id).username%></span>
+               
+              </p>
+          <%end%>
+        <%end%>
+        <!-- <p class="user-message sent">
           
         
           Hello this is anas and I completely hate you so you people should not wait for me and die he he he he 
           <br>
           <br>
-          <span class="sender">Anas Aijaz</span>
+
         </p>
         <p class="user-message">
             Hello this is anas and I completely hate you so you people should not wait for me and die he he he he 
@@ -30,17 +53,21 @@
           </p><p class="user-message sent">
             Hello this is anas and I completely hate you so you people should not wait for me and die he he he he 
   
-          </p>
+          </p> -->
  
    
 </div>
 <div class="send">
+  <%= form_for @message  ,url:messages_path , method:"post" ,remote: true do |f|%>
     <div class="row send-controls">
-        <div class="col-10">
-            Enter your message here...
-        </div>
-        <div class="col-2">
-            Send
-        </div>
-    </div>
+      
+      <div class="col-10">
+        <%=f.text_field :message  , class:"comment-box" , autocomplete:"off", placeholder:"Enter message here"%>
+      </div>
+      <div class="col-2 d-flex align-content-center justify-content-end">
+  <%= f.submit "Send", class:"comment-button"%>
+  
+</div>
+</div>
+<%end%>
 </div>
