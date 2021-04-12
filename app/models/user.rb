@@ -5,6 +5,7 @@ class User < ApplicationRecord
   has_many :messages , dependent: :destroy
   has_many :likes
   has_many :comments
+  zodiac_reader :birthday
   
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable , :confirmable
