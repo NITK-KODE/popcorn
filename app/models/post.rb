@@ -5,4 +5,5 @@ class Post < ApplicationRecord
     def liked?(user)
         !!self.likes.find{|like| like.user_id == user.id}
     end
+    validates :post , length:{minimum:20 , maximum:150}
 end

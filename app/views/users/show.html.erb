@@ -6,7 +6,7 @@
    </div>
    <div class="col-8 user"> 
           <h2><%=@user.username%> <span class="zodiac">Scorpio</span> 
-     <button type="button" class="btn btn-primary btn-sm">Follow</button>
+     <!-- <button type="button" class="btn btn-primary btn-sm">Follow</button> -->
           
           </h2> 
           
@@ -24,7 +24,7 @@
       345 following
      </div>
      <div class="col-4 badge">
-      16 posts
+       <%=pluralize(@user.posts.count , "post")%>
      </div>
   </div>
 

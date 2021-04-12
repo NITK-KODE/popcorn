@@ -6,7 +6,7 @@
   
 <div class="row">
 <div class="col-md-1 col-sm-2 comment-username">
-<%=c.user.username%>
+<a href="<%=profile_path(c.user)%>"><%=c.user.username%></a>
 </div>
 
   <div class="col-md-10 col-sm-9 comment-comment">
