@@ -28,13 +28,13 @@
 
 .options{
 	height: 50px;
-	background-color:#ffc107
-	;
+	background-color:#ffc107;
+	
 	padding-top: 8px;
 }
 
 .user{
-height: 200px;
+height: 230px;
 }
 
 .user img{
@@ -73,7 +73,10 @@ height: 200px;
 
 .mycontainer{
 margin-top: 30px;
+
+
 }
+
 
 .float{
 	position:fixed;
@@ -133,10 +136,11 @@ margin-top: 30px;
 	padding-right: 20px;
 }
 
-.postholder img{
+.profile-logo{
 	width: 35px;
 	margin-right: 5px;
 	background-color: hotpink;
+	
 }
 
 .date{
