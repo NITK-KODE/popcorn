@@ -14,5 +14,5 @@ Rails.application.routes.draw do
   get '/m' => 'messages#index'
   resources :posts , only:[:show]
   resources :messages , only:[:create , :new]
-
+  #ahas
 end
