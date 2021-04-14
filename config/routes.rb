@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  # devise_for :users , controllers:{
-  #   confirmations:'confirmations',
-  #   registrations:'registrations'
-  # }
+  devise_for :users , controllers:{
+    confirmations:'confirmations',
+    registrations:'registrations'
+  }
   get '/pop' => 'posts#new'
   post '/pop' => 'posts#create'
   get '/feed' => 'users#feed'
