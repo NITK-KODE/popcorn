@@ -8,5 +8,5 @@ test:
 
 production:
   adapter: redis
-  url: redis://redistogo:c3a78472c5982cf40e03bf26bd580b33@scat.redistogo.com:11752/
-  channel_prefix: rails-chat-tutorial_production
+  url: <%= ENV.fetch("REDIS_URL") %>
+  
