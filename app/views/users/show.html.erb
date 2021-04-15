@@ -33,7 +33,7 @@
 
   <div class="row justify-content-around badges options">
     <div class="col-2 badge">
-    <%=link_to '<i class="bi bi-plus-circle-fill"></i>'.html_safe, pop_path %>
+    <%=link_to '<i class="bi bi-plus-circle-fill">Post</i>'.html_safe, pop_path %>
     </div>
     
      <div class="col-2 badge">
@@ -41,10 +41,10 @@
      </div>
 
      <div class="col-2 badge">
-      <%=link_to '<i class="bi bi-gear-fill"></i>'.html_safe, edit_user_registration_path  %>
+      <%=link_to '<i class="bi bi-gear-fill">Settings</i>'.html_safe, edit_user_registration_path  %>
      </div>
      <div class="col-2 badge">
-    <%=link_to '<i class="bi bi-key-fill"></i>'.html_safe, destroy_user_session_path , method: :delete	 %>
+    <%=link_to '<i class="bi bi-key-fill">Log out</i>'.html_safe, destroy_user_session_path , method: :delete	 %>
      </div>
   </div>
 
