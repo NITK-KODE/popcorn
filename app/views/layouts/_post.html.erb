@@ -11,15 +11,15 @@
   <div class="col-8 response">
     <%if obj.liked?(current_user)%>
     
-    <i class="bi bi-heart-fill"></i>
+    <i class="bi bi-heart-fill">Hearted</i>
     <%else%>
     
-    <%= link_to '<i class="bi bi-heart"></i>'.html_safe , like_path(obj) , remote:true, method: :put  %>
+    <%= link_to '<i class="bi bi-heart">Heart</i>'.html_safe , like_path(obj) , remote:true, method: :put  %>
     
     <%end%>
    
-    <%= link_to '<i class="bi bi-chat-square-dots"></i>'.html_safe , post_path(obj) %>
-    <i class="bi bi-arrow-90deg-right"></i>
+    <%= link_to '<i class="bi bi-chat-square-dots">Comment</i>'.html_safe , post_path(obj) %>
+    <i class="bi bi-arrow-90deg-right">Share</i>
   </div>
   <div class="col-4 d-flex justify-content-end like-count"><p><%=pluralize(obj.likes.count , "Heart")%> </p></div> 
 </div>
