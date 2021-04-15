@@ -30,6 +30,10 @@ Rails.application.configure do
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = true
   config.assets.digest = true
+  config.web_socket_server_url = "wss://limitless-ocean-51623.herokuapp.com/cable" 
+  config.action_cable.allowed_request_origins = ['https://limitless-ocean-51623.herokuapp.com', 'http://limitless-ocean-51623.herokuapp.com']
+
+
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.asset_host = 'http://assets.example.com'
