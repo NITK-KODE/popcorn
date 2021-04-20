@@ -19,7 +19,9 @@
     <%end%>
    
     <%= link_to '<i class="bi bi-chat-square-dots">Comment</i>'.html_safe , post_path(obj) %>
-    <i class="bi bi-arrow-90deg-right">Share</i>
+    
+    <a href="whatsapp://send?text=This is WhatsApp sharing example using link"       data-action="share/whatsapp/share"  
+        target="_blank"> <i class="bi bi-arrow-90deg-right">Share</i> </a>
   </div>
   <div class="col-4 d-flex justify-content-end like-count"><p><%=pluralize(obj.likes.count , "Heart")%> </p></div> 
 </div>

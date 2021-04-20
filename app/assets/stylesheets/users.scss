@@ -12,13 +12,23 @@
 
 // carousel code
 
+body{
+	background-image: image-url("backdrop.png");
+	background-size: contain;
+	background-repeat: repeat;
+}
+
+.mycontainer{
+	background-color: yellow;
+
+}
 .badge i{
 	font-size: 30px;
 	
 }
 
 .badge{
-	font-size: 15px;
+	font-size: 25px;
 }
 .badges{
 	margin-top: 10px;
@@ -28,7 +38,7 @@
 
 .options{
 	height: 50px;
-	background-color:#ffc107;
+	overflow: hidden;
 	
 	padding-top: 8px;
 }
@@ -72,7 +82,8 @@ height: 230px;
 }
 
 .mycontainer{
-margin-top: 30px;
+padding-top: 30px;
+margin-top: 20px;
 
 
 }
@@ -147,7 +158,12 @@ margin-top: 30px;
  text-align: right;
 }
 
-
+.welcome{
+	background-image: image-url("welcome.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
 
 // Sign Up page
 
@@ -173,56 +189,72 @@ margin-top: 30px;
 
 
 @media (max-width: 767px) {
-	
+
+	.mycontainer{
+		padding-top: 30px;
+		margin-top: 20px;
+		
+		
+		}
+		
 	.pop{
 		font-size: 25px;
 	}
     .date{
-	font-size: 10px;
-    }  
-
-	.postholder{
-		
-		padding:20px 30px 20px 30px;
-     	margin:10px 0px;
-
-		
-	}
-
-	.container{
-		width: 100vw;
-	}
-	.user img{
-		width: 100px;
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-	}
-	.user p{
-		font-size: 12px;
-		margin-bottom: 0;
-	}
-
-	.zodiac{
 		font-size: 10px;
-		font-family: monospace;
-	}
+}  
 
-	.row:nth-child(2) button{
-		margin-top: 10px;
-	}
 
-	.option button{
-		display: block;
-		margin-right: auto;
-		margin-left: auto;
-	}
+.postholder{
 	
+	padding:20px 30px 20px 30px;
+	margin:10px 0px;
+	
+	
+}
 
-	.display-4{
-		font-size: 30px;
-		overflow: hidden;
-		text-align: center;
-	}
+.container{
+	width: 100vw;
+}
+.user img{
+	width: 100px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.user p{
+	font-size: 12px;
+	margin-bottom: 0;
+}
+
+.zodiac{
+	font-size: 10px;
+	font-family: monospace;
+}
+
+.row:nth-child(2) button{
+	margin-top: 10px;
+}
+
+.option button{
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.response i{
+	font-size: 15px;
+	padding-right: 2px;
+}
+
+.badge i{
+	font-size: 20px;
+}
+
+.display-4{
+	font-size: 30px;
+	overflow: hidden;
+	text-align: center;
+}
 
   }
