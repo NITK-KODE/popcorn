@@ -20,7 +20,7 @@
    
     <%= link_to '<i class="bi bi-chat-square-dots">Comment</i>'.html_safe , post_path(obj) %>
     
-    <a href="whatsapp://send?text=This is WhatsApp sharing example using link"       data-action="share/whatsapp/share"  
+    <a href="whatsapp://send?text=<%=obj.post%>"       data-action="share/whatsapp/share"  
         target="_blank"> <i class="bi bi-arrow-90deg-right">Share</i> </a>
   </div>
   <div class="col-4 d-flex justify-content-end like-count"><p><%=pluralize(obj.likes.count , "Heart")%> </p></div> 
@@ -28,36 +28,3 @@
 
 
 
-
-<!-- 
-
-<div class="card col-8">
-  <div class="card-header">
-    <%=obj.title%>
-  </div>
-  <div class="card-body">
-    <blockquote class="blockquote mb-0">
-      <p><%=obj.post%></p>
-      <hr>
-      <div class="row">
-      <div class="col-4">
-      <%= link_to "Show" , post_path(obj) , class:"badge badge-primary" %>
-      <%= link_to "Like" , like_path(obj) , remote:true, method: :put , class:"badge badge-danger" %>
-      <%=obj.likes.count%>
-      </div>
-      <div class="col-4">
-      </div>
-
-      <div class="col-4">
-       <%=obj.created_at.strftime("%d %b %y")%>
-      </div>
-      </div>
-
-      </blockquote>
-      <footer><%=render "layouts/comment" , obj:obj%></footer>
-      <%=render "layouts/commentSection" , obj:obj%>
-  </div>
-</div>
-
-
-</div> -->
