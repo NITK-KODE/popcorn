@@ -9,7 +9,7 @@
 
     <%if @post.comments.count != 0 %>
 
-<%= render "layouts/commentSection" , obj:@post%>
+<%= render "layouts/commentSection" , comments: @post.comments.includes(:user) %>
 <%else%>
 <%= render "layouts/nocomments" , obj:@post%>
 <%end%>
