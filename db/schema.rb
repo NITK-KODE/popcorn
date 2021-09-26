@@ -31,14 +31,6 @@ ActiveRecord::Schema.define(version: 2021_04_12_190355) do
     t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
-  create_table "messages", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.string "message"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_messages_on_user_id"
-  end
-
   create_table "posts", force: :cascade do |t|
     t.integer "user_id"
     t.string "title"
@@ -79,5 +71,4 @@ ActiveRecord::Schema.define(version: 2021_04_12_190355) do
   add_foreign_key "comments", "users"
   add_foreign_key "likes", "posts"
   add_foreign_key "likes", "users"
-  add_foreign_key "messages", "users"
 end

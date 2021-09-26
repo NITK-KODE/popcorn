@@ -9,7 +9,7 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import 'bootstrap'
 import 'bootstrap-icons/font/bootstrap-icons.css'
-
+import  "../application.css";
 
 require("packs/custom")
 Rails.start()

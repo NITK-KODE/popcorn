@@ -1,32 +1,14 @@
-@import 'bootstrap/dist/css/bootstrap';
-@font-face {
-    font-family: 'BalsamiqSans';
-    src: url('BalsamiqSans-Regular.ttf');
- }
- @font-face {
-     font-family: 'Nunito';
-     src:url('Nunito-Regular.ttf')
- }
- @font-face {
-    font-family: 'NunitoBlack';
-    src:url('Nunito-Black.ttf')
-}
+
 
 
 *{
-    overflow-x: hidden;
-    font-family: "Nunito";
+  font-family: 'Poppins', sans-serif;
     
      
 }
-h1 , h2 , h3 ,h4 ,h5 ,h6 ,p{
-    overflow: hidden;
-}
-
-
 
 .nav{
-    background-color: black;
+    background-color: white;
     
 }
 .navbar-brand img{
@@ -36,7 +18,7 @@ h1 , h2 , h3 ,h4 ,h5 ,h6 ,p{
 .nav-title{
     color:wheat;
     padding-left: 10px;
-    font-family: "NunitoBlack";
+
   
     font-size: 20px;
 }

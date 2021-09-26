@@ -6,7 +6,7 @@ class User < ApplicationRecord
   has_many :likes
   has_many :comments
   zodiac_reader :birthday
-  
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable , :confirmable
   validates :email , format:{with:/\A.+@nitk.edu.in+\z/ , message:"NITK edu account required"}

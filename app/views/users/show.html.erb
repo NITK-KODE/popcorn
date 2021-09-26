@@ -6,26 +6,29 @@
    </div>
    <div class="col-8 user"> 
           <h2><%=@user.username%> 
-     <!-- <button type="button" class="btn btn-primary btn-sm">Follow</button> -->
+      <button type="button" class="btn btn-primary btn-sm">Follow</button>
           
-          </h2> 
+          </h2>
+
+          <p>You made this working fucker wooooooooooohoooo</p>
           
-          <p style="font-weight: bold;">Magician XD</p>
+          <p style="font-weight: 300;">Magician XD</p>
           <hr>
-          <p>Haha life to irony me barbaad ho hi gayi hai na grades hai na bandi hain ab pata nhi kya hoga mera kuch smjh nhi aarha hain bc</p>
+          <p>This is new working lol?</p>
    </div>
  </div>
  
 
   <div class="row justify-content-around badges ">
-    <div class="col-4 badge">
-    <span style="padding: 5px; border-radius: 50px; background-color: black; color: white;" class="zodiac"><%=@user.zodiac_sign%></span> 
+    <div class="col-4">
+    <p style="padding: 5px; text-align: center ;border-radius: 50px; background-color: black; color: white;" class="zodiac"><%=@user.zodiac_sign%></p>
     </div>
-    <div class="col-4 badge">
-    <span style="padding: 5px; border-radius: 50px; background-color: black; color: white;" class="zodiac">civil</span> 
+    <div class="col-4">
+    <p style="padding: 5px; text-align: center ;border-radius: 50px; background-color: black; color: white;" class="zodiac">civil</p>
      </div>
-     <div class="col-4 badge">
-    <span style="padding: 5px; border-radius: 50px; background-color: black; color: white;" class="zodiac">  <%=pluralize(@user.posts.count , "post")%></span> 
+     <div class="col-4">
+    <p style="padding: 5px; border-radius: 50px; text-align: center ;background-color: black; color: white;" class="zodiac">
+      <%=pluralize(@user.posts.count , "post")%></p>
 
      
      </div>
@@ -35,8 +38,12 @@
 
   <div class="row justify-content-around badges options">
     <div class="col-3 badge">
-    <%=link_to '<i class="bi bi-plus-circle-fill">Post</i>'.html_safe, pop_path  , class:"account"%>
+    <%=link_to pop_path do%>
+      <h4>Post</h4>
+    <%end %>
     </div>
+
+
     
   
      <div class="col-3 badge">
@@ -49,5 +56,7 @@
 
 
 </div>
+
+
 
 <%= render "layouts/postholder" , obj:@user.posts%>

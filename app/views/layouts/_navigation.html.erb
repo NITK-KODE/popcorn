@@ -1,47 +1,18 @@
-<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-  <a class="navbar-brand" href="#"><img src="<%=asset_path('logo.png')%>"><span class="nav-title">Popcorn</span></a>
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
-      <li class="nav-item">
-        <%= link_to 'S4 Chat', '/m' , class:"nav-link"%>
-
-        </li>
-        <li class="nav-item">
-        <%= link_to 'Feed', feed_path , class:"nav-link"%>
-
-        </li>
-        <li class="nav-item">
-        <%= link_to("#{current_user.email}", profile_path(current_user) , class:"nav-link")%>
-          
-        </li>
-      
-        <li class="nav-item">
-        <%= link_to('Sign out', destroy_user_session_path , method: :delete  , class:"nav-link")%>
-        </li>
-      </ul>
-      
-    </div>
-  </div>
-</nav> -->
-
 
 <!-- new navigation -->
 <nav class="navigation">
   <div class="container-fluid">
     <div class="row align-items-center">
       <div class="col-4">
-      <%= link_to "<i class='bi bi-person-fill'>Profile</i>".html_safe, profile_path(current_user) , class:"" %>
+      <%= link_to '<span class="material-icons">face</span>'.html_safe, profile_path(current_user) , class:"" %>
       </div>
-      <div class="col-4" align="center"><a class="nav-link" href="/feed"><img src="<%=asset_path('logo.png')%>"><span class="nav-title">Popcorn</span></a>
+      <div class="col-4 d-flex justify-content-center"><a class="nav-link" href="/feed"><img src="<%=asset_path('logo.png')%>"><span class="nav-title">Popcorn</span></a>
       </div>
-    
+
+
       <div class="col-4 d-flex justify-content-end">
         
-       <%= link_to "<i class='bi bi-chat-right-quote-fill'>Chat</i>".html_safe, m_path , :data => { :no_turbolink => true } %>
+       <%= link_to '<span class="material-icons">bookmark</span>'.html_safe, m_path , :data => { :no_turbolink => true } %>
       </div>
     </div>
   </div>
