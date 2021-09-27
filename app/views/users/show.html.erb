@@ -1,61 +1,33 @@
-<div class="container mycontainer">
-
- <div class="row myrow">
-   <div class="col-4 user">
-    <img src="<%=asset_path('logo.png')%>">
-   </div>
-   <div class="col-8 user"> 
-          <h2><%=@user.username%> 
-      <button type="button" class="btn btn-primary btn-sm">Follow</button>
-          
-          </h2>
-
-          <p>You made this working fucker wooooooooooohoooo</p>
-          
-          <p style="font-weight: 300;">Magician XD</p>
-          <hr>
-          <p>This is new working lol?</p>
-   </div>
- </div>
- 
-
-  <div class="row justify-content-around badges ">
-    <div class="col-4">
-    <p style="padding: 5px; text-align: center ;border-radius: 50px; background-color: black; color: white;" class="zodiac"><%=@user.zodiac_sign%></p>
+<div class="container w-1/2 mx-auto bg-yellow-300 px-4 pt-8 pb-8 rounded-md shadow-md mt-8 mb-12 relative">
+  <div class="person-info w-full flex-row flex items-center">
+    <img class="w-20" src="<%=asset_path('logo.png')%>">
+    <div class="pl-10">
+      <h2 class="text-3xl font-bold mb-2"><%=@user.username.capitalize%></h2>
+      <p class="text-sm text-gray-700">Keen interest in 📚 <br/>Regular reader of Poppy 🍭</p>
     </div>
-    <div class="col-4">
-    <p style="padding: 5px; text-align: center ;border-radius: 50px; background-color: black; color: white;" class="zodiac">civil</p>
-     </div>
-     <div class="col-4">
-    <p style="padding: 5px; border-radius: 50px; text-align: center ;background-color: black; color: white;" class="zodiac">
-      <%=pluralize(@user.posts.count , "post")%></p>
+    <div class="ml-auto flex flex-col items-center">
+      <%=link_to edit_user_registration_path do%>
+        <button class="p-1.5 text-sm rounded-sm border-1 border-gray-700 mb-2">
+          Edit profile
+        </button>
+      <%end%>
 
-     
-     </div>
+      <%=link_to destroy_user_session_path, method: :delete do%>
+        <button class="p-1.5 text-sm rounded-sm text-red-600">
+          Log out
+        </button>
+      <%end%>
+    </div>
   </div>
 
 
-
-  <div class="row justify-content-around badges options">
-    <div class="col-3 badge">
-    <%=link_to pop_path do%>
-      <h4>Post</h4>
-    <%end %>
-    </div>
-
-
-    
-  
-     <div class="col-3 badge">
-      <%=link_to '<i class="bi bi-gear-fill">Settings</i>'.html_safe, edit_user_registration_path,class:"account" %>
-     </div>
-     <div class="col-3 badge">
-    <%=link_to '<i class="bi bi-key-fill">Log out</i>'.html_safe, destroy_user_session_path ,class:"account",  method: :delete	 %>
-     </div>
-  </div>
-
-
+  <%=link_to new_post_path,class:"bg-black rounded-full w-48px h-48px flex items-center absolute bottom-0 -mb-5 right-1/4 transform translate-x-3/4" do%>
+    <span class="mx-auto material-icons text-secondary">add</span>
+  <%end %>
 </div>
+
+<!-- NUMBER OF POSTS CREATED-->
+<!--BRANCH FROM-->
 
 
 

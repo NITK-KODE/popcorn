@@ -1,11 +1,12 @@
+<div class="container w-1/2 mx-auto mb-5  mt-5 shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer">
+  <%=render "layouts/post" , obj:@post%>
+</div>
+
 <div class="row justify-content-center">
-
-<%=render "layouts/post" , obj:@post%>
-
 <%=render "layouts/comment" , obj:@post%>
 </div>
 
-<div class="container commentholder" >
+<div class="container container w-1/2 mx-auto pb-2" >
 
     <%if @post.comments.count != 0 %>
 

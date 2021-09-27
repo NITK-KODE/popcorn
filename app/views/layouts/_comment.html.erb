@@ -1,20 +1,27 @@
 
   <%= form_with(model:@comment , url: comment_path(obj), method: "create") do |f| %>
-  <div class="row">
+<!--  <div class="row">-->
 
   
-    <div class="col-8">
-      <%= f.text_field :comment , class:"comment-box" , autocomplete:"off" , placeholder:"Enter a comment"%>
+<!--    <div class="col-8">-->
+      <%#= f.text_field :comment , class:"comment-box" , autocomplete:"off" , placeholder:"Enter a comment"%>
 
-    </div>
-    <div class="col-4 d-flex justify-content-end">
-      <p class="date">
+<!--    </div>-->
+<!--    <div class="col-4 d-flex justify-content-end">-->
+<!--      <p class="date">-->
 
-        <%= f.submit "comment" , class:"comment-button" %>
+        <%#= f.submit "comment" , class:"comment-button" %>
 
-      </p>
+<!--      </p>-->
 
-    </div>
+<!--    </div>-->
     
-    </div>
-    <% end %>
+<!--    </div>-->
+<div class="container w-1/2 mx-auto flex flex-row justify-between mb-8">
+  <%= f.text_field :comment , class:"rounded-sm p-4 shadow-md w-full mr-10" , autocomplete:"off" , placeholder:"Enter a comment"%>
+
+  <%= f.submit "comment" , class:"text-secondary px-2" %>
+
+</div>
+
+  <% end %>

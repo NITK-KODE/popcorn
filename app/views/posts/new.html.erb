@@ -1,26 +1,22 @@
-<div class="containerwrapper">
+<div class="container mx-auto w-1/2 pt-10">
 
-  <div class="container-fluid newpostholder">
-  
+
     <%= form_with(model:@posts) do |f| %>
-  <div class="row">
-  
+
     
   
-  
-        <%= f.text_area :post , id:"post" , placeholder:"What's on your mind biatch?" ,minlength:10 ,maxlength:96%>
-  
+
+    <textarea name="post" rows="5"  spellcheck="false" placeholder="What's in your mind?"
+              class="p-5 shadow-md text-secondary text-3xl rounded-t-3xl rounded-bl-3xl bg-white w-full"></textarea>
+
   
         
-        
-      </div>
-      <div class="row d-flex justify-content-center">
-        <%= f.submit "Post" ,id:"pstbtn",class:"btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm"%>
-        
-  </div>
-  <% end %>
-  
-  
+
+    <div class="flex justify-end">
+        <%= f.submit "Post" ,class:"px-10 pt-3 pb-3 rounded-full bg-indigo-700 shadow-md text-white ml-auto"%>
+    </div>
+    <% end %>
+
+
   </div>
 
-</div>

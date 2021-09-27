@@ -1,5 +1,5 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * This is a manifest file that'll be compiled into application.scss, which will include all the files
  * listed below.
  *
  * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
@@ -13,6 +13,3 @@
  *= require_self
  */
 
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
-  line-height: unset !important;
-}

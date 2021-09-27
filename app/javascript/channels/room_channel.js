@@ -2,10 +2,7 @@ import consumer from "./consumer"
 
 consumer.subscriptions.create("RoomChannel", {
   connected() {
-    console.log('this is good');
     // Called when the subscription is ready for use on the server
-    
-    
   },
 
   disconnected() {
@@ -13,27 +10,35 @@ consumer.subscriptions.create("RoomChannel", {
   },
 
   received(data) {
-    // Called when there's incoming data on the websocket for this 
+    let chatbox = document.querySelector(".chat-box")
+    let chatform = document.querySelector(".chat-form")
+    let messageInput = document.querySelector(".message-box")
+
     console.log(data);
-    var sent_message = "<p class='user-message sent'>";
-    var rcvd_message = "<p class='user-message'>";
 
-  
-    if(data.user_id === parseInt(document.cookie.substring(10))){
-      $( ".chat-box" ).append( sent_message + data.content.message  +"</p>" );
-      
-    }
-    else{
-      $( ".chat-box" ).append( rcvd_message +  data.content.message + "<br><span class='sender'>" + data.username + "</span>" +"</p>" );
-    }
+    console.log(typeof chatbox.dataset.userId)
+    let message = document.createElement("DIV")
+    let is_current_user = data.user_id=== +chatbox.dataset.userId
+    message.classList.add("flex")
+    message.classList.add("flex-row")
+    if(is_current_user)
+      message.classList.add("justify-end")
+    else
+      message.classList.add("justify-start")
 
-    $('form')[0].reset();
-    var d = $('.chat-box');
-    d.scrollTop(d.prop("scrollHeight"));
+    message.innerHTML = `<p class="message-text text-sm font-light  inline bg-${is_current_user?'blue':'green'}-300  p-3 mt-2 mb-2 rounded-t-full rounded-${is_current_user?'bl':'br'}-full">
+          ${data.content}
+        </p>`
 
+    chatbox.append(message);
+    chatbox.scrollIntoView({ behavior: "smooth", block: "end" })
 
+    chatform.reset()
 
-    
+    // $('form')[0].reset();
+    // var d = $('.chat-box');
+    // d.scrollTop(d.prop("scrollHeight"));
 
-  }
+  },
+
 });

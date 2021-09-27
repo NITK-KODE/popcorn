@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
   devise_for :users , controllers:{
     confirmations:'confirmations',
-    registrations:'registrations'
-  }
-  get '/pop' => 'posts#new'
+    registrations:'registrations',
+  } do
+    delete '/users/sign_out' => 'devise/sessions#destroy'
+  end
+
+
+
+  get '/pop' => 'posts#new' , as:"new_post"
   post '/pop' => 'posts#create'
   get '/feed' => 'users#feed'
   put '/posts/:id/like' => 'posts#like' , as: 'like'

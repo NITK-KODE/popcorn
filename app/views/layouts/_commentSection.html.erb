@@ -1,22 +1,42 @@
-
-
-
 <% comments.each do |c| %>
 
   
-<div class="row">
-<div class="col-md-1 col-sm-2 comment-username">
-<a href="<%=profile_path(c.user)%>"><%=c.user.username%></a>
+<!--<div class="row">-->
+<!--<div class="col-md-1 col-sm-2 comment-username">-->
+<!--<a href="<%#=profile_path(c.user)%>"><%#=c.user.username%></a>-->
+<!--</div>-->
+
+<!--  <div class="col-md-10 col-sm-9 comment-comment">-->
+
+  <%#=c.comment%>
+<!--  </div>-->
+<!--  <div class="col-md-1 col-sm-1">-->
+    <%#=c.created_at.strftime("%d %b")%>
+<!--  </div>-->
+<!--</div> -->
+
+<div class="mb-8">
+  <div class="flex flex-row items-center pb-3">
+  <img class="w-10 rounded-full" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGVyc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80">
+  </img>
+    <div>
+
+  <p class="text-sm px-4">
+    <%=c.user.username.capitalize%>
+  </p>
+
+      <p class="text-xs px-4 text-gray-500">
+        <%=c.created_at.strftime("%d %b")%>
+      </p>
+    </div>
+    </img>
+  </div>
+  <div>
+    <p class="font-light text-sm text-gray-700"><%=c.comment%></p>
+  </div>
+
 </div>
 
-  <div class="col-md-10 col-sm-9 comment-comment">
- 
-  <%=c.comment%>
-  </div>
-  <div class="col-md-1 col-sm-1">
-    <%=c.created_at.strftime("%d %b")%>
-  </div>
-</div> 
+<%end%>
 
 
-  <%end%>
